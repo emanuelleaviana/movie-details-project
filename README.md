@@ -36,4 +36,11 @@ The layout is optimized for screens ranging from **375px to 1440px**, with compo
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/playcube.git
+   git clone https://github.com/your-username/movie-details-project.git
+
+- Open the `index.html` file directly in your browser.
+
+✅ **Tip:** For better performance and local development, use the **Live Server** extension in **Visual Studio Code**. It enables automatic reload and runs the project on a local development server.
+
+⚠️ **Note:** A valid **TMDB API key** is required for full functionality. You can obtain one from [TMDB Developer Portal](https://developer.themoviedb.org/).
+
