@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Filme</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../assets/img/logo-clara.png" alt="Logo PlayCube" height="40">
+            </a>
+            <button class="navbar-toggler" aria-label="Menu">
+                <span class="hamburger-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Filmes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Séries</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Detalhes do filme -->
+    <section class="container movie-details-section py-5">
+        <div class="row">
+            <div class="col-md-4 col-lg-4 mb-3">
+                <img id="movie-poster" src="" class="poster img-fluid rounded" alt="Pôster do filme">
+            </div>
+            <div class="col-md-8 col-lg-8">
+                <h1 class="movie-title">
+                    <span id="movie-title-text" class="text-primary-custom">Carregando título</span>
+                    <span id="movie-year" class="text-accent"> (0000)</span>
+                </h1>
+
+                <div class="movie-info mt-4">
+                    <p>
+                        <span class="info-label">Gênero:</span><br>
+                        <span id="movie-genres" class="info-content">Carregando...</span>
+                    </p>
+
+                    <p>
+                        <span class="info-label">Sinopse:</span><br>
+                        <span id="movie-synopsis" class="info-content">Carregando...</span>
+                    </p>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                <span class="info-label">Dirigido por:</span><br>
+                                <span id="movie-director" class="info-content">Carregando...</span>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                                <span class="info-label">Escrito por:</span><br>
+                                <span id="movie-writers" class="info-content">Carregando...</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                <span class="info-label">Situação:</span><br>
+                                <span id="movie-status" class="info-content">Carregando...</span>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                                <span class="info-label">Idioma Original:</span><br>
+                                <span id="movie-language" class="info-content">Carregando...</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                                <span class="info-label">Orçamento:</span><br>
+                                <span id="movie-budget" class="info-content">Carregando...</span>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                                <span class="info-label">Receita:</span><br>
+                                <span id="movie-revenue" class="info-content">Carregando...</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Elenco -->
+    <section class="bg-cast py-5">
+        <div class="container">
+            <div class="section-title cast-title d-flex">
+                Elenco
+                <button class="btn btn-primary show-more-btn">Ver mais</button>
+            </div>
+
+            <div class="cast position-relative mx-auto">
+                <div class="cast-slider" id="cast-list">
+                </div>
+
+                <div class="cast-fade-right"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resenhas -->
+    <section class="container my-4">
+        <div class="section-title cast-title">
+            Resenhas
+            <button class="btn btn-primary show-more-btn">Ver mais</button>
+        </div>
+        <div class="row" id="reviews-section">
+        </div>
+    </section>
+
+    <!-- Mídias -->
+    <section class="container my-4">
+        <div class="section-title cast-title">
+            Mídia
+        </div>
+        
+        <h5 class="title-section">
+            <span class="media-title">Vídeos</span>
+            <span class="media-count" id="videos-count">(0)</span>
+            <button class="btn btn-primary show-more-btn">Ver mais</button>
+        </h5>     
+        <div class="media-fade">
+            <div class="row" id="videos-list">
+            </div>
+            <div class="media-fade-right"></div>
+        </div>
+
+        <h5 class="mt-4 title-section">
+            <span class="media-title">Pôsteres</span>
+            <span class="media-count" id="posters-count">(0)</span>
+            <button class="btn btn-primary show-more-btn">Ver mais</button>
+        </h5>
+        <div class="media-fade">
+            <div class="row " id="posters-list">
+            </div>
+            <div class="media-fade-right"></div>
+        </div>
+
+        <h5 class="mt-4 title-section">
+            <span class="media-title">Imagens de fundo</span>
+            <span class="media-count" id="backdrops-count">(0)</span>
+            <button class="btn btn-primary show-more-btn">Ver mais</button>
+        </h5>
+        <div class="media-fade">
+
+            <div class="row" id="backdrops-list">
+            </div>
+            <div class="media-fade-right"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer-aside bg-cast py-5">
+        <div class="container text-primary-custom">
+            <div class="row text-center text-md-left">
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <img src="../assets/img/logo-escura.png" alt="Logo PlayCube" height="40" class="img-logo">
+                </div>
+                <div class="col-md-3">
+                    <p>Sobre</p>
+                    <p>Contato</p>
+                    <p>Suporte</p>
+                </div>
+                <div class="col-md-3">
+                    <p>Adicione um Filme</p>
+                    <p>Adicione uma Série</p>
+                    <p>Discussões</p>
+                </div>
+                <div class="col-md-3 footer-aside-column">
+                    <p>Termos de Uso</p>
+                    <p>Políticas de Privacidade</p>
+                    <p>Diretrizes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
