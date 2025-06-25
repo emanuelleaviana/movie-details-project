@@ -344,6 +344,46 @@ body {
   pointer-events: none;
 }
 
+.media-slider {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.background-recommendations {
+  background-color: #102C57;
+}
+
+.recommendations-title {
+  color: #F8F0E5;
+  font-weight: bold;
+}
+
+.recommendation-card-content {
+  text-align: center;
+  font-size: 24px;
+}
+
+.recommendation-card-content img {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.recommendation-card-content .movie-title-section {
+  font-weight: bold;
+}
+
 @media (min-width: 745px) {
   .navbar-collapse {
     display: flex !important;
@@ -435,28 +475,28 @@ body {
     height: 140px;
   }
 
-  #reviews-section {
+  .reviews-section {
     gap: 1rem;
     display: flex;
     flex-wrap: wrap;
   }
 
-  #reviews-section>div {
+  .reviews-section>div {
     margin-bottom: 1rem;
   }
 
-  #videos-list.media-slider .media-box,
-  #posters-list.media-slider .media-box,
-  #backdrops-list.media-slider .media-box {
+  .videos-list.media-slider .media-box,
+  .posters-list.media-slider .media-box,
+  .backdrops-list.media-slider .media-box {
     flex: 0 0 auto;
   }
 
-  #posters-list.media-slider .media-box {
-    width: 200px;
+  .posters-list.media-slider .media-box {
+    width: 300px;
   }
 
-  #backdrops-list.media-slider .media-box {
-    width: 400px;
+  .backdrops-list.media-slider .media-box {
+    width: 300px;
   }
 
   .media-slider {
@@ -614,27 +654,27 @@ body {
     height: 160px;
   }
 
-  #reviews-section {
+  .reviews-section {
     gap: 1rem;
     display: flex;
     flex-wrap: wrap;
   }
 
-  #reviews-section>div {
+  .reviews-section>div {
     margin-bottom: 1rem;
   }
 
-  #videos-list.media-slider .media-box,
-  #posters-list.media-slider .media-box,
-  #backdrops-list.media-slider .media-box {
+  .videos-list.media-slider .media-box,
+  .posters-list.media-slider .media-box,
+  .backdrops-list.media-slider .media-box {
     flex: 0 0 auto;
   }
 
-  #posters-list.media-slider .media-box {
+  .posters-list.media-slider .media-box {
     width: 300px;
   }
 
-  #backdrops-list.media-slider .media-box {
+  .backdrops-list.media-slider .media-box {
     width: 300px;
   }
 
